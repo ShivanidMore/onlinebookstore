@@ -12,7 +12,7 @@ pipeline {
 		stage('maven install') {
 			steps {
 				dir('/mnt/project/onlinebookstore'){
-                                	mvn install
+                                	sh 'mvn install'
 				}
 			}
 		}
