@@ -23,8 +23,10 @@ pipeline {
 			}
                 }
 		stage('copy war into tomcat'){
-			steps {
-				sh "cp /mnt/project/onlinebookstore/target/onlinebookstore.war /mnt/build_tools/apache-tomcat-9.0.78/webapps/"
+			steps { 
+				dir('/mnt/project/onlinebookstore'){
+					cp target/onlinebookstore.war /mnt/build_tools/apache-tomcat-9.0.78/webapps/
+				}
 			}
 		}
 		stage('tomcat start'){
