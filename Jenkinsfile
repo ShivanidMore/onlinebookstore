@@ -32,7 +32,7 @@ pipeline {
 		stage('tomcat start'){
 			steps {
 				dir('/mnt/build_tools/apache-tomcat-9.0.78/bin'){
-					./startup.sh
+					sh "./startup.sh"
                                 }
 			}
 		}
