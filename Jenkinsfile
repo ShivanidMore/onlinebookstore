@@ -1,12 +1,12 @@
 pipeline {
-	agent any {
-		
-		customWorkspace '/mnt/project/'
-	}
+	agent any 
 	stages {
 		stage('git_clone'){
-			steps {
-	         		sh '"git clone "https://github.com/ShivanidMore/onlinebookstore.git"'
+			steps {  
+				dir('/mnt/project/'){
+					sh '"git clone "https://github.com/ShivanidMore/onlinebookstore.git"'
+				}
+	         		
 			}
                 }
 		stage('maven install') {
