@@ -1,6 +1,6 @@
 pipeline {
-	node {
-		label 'build_in'
+	agent any {
+		
 		customWorkspace '/mnt/project/'
 	}
 	stages {
