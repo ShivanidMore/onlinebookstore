@@ -25,7 +25,7 @@ pipeline {
 		stage('copy war into tomcat'){
 			steps { 
 				dir('/mnt/project/onlinebookstore'){
-					cp target/onlinebookstore.war /mnt/build_tools/apache-tomcat-9.0.78/webapps/
+					cp target/onlinebookstore.war /mnt/build_tools/apache-tomcat-9.0.78/webapps
 				}
 			}
 		}
