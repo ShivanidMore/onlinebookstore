@@ -1,12 +1,12 @@
 pipeline {
-	label {
+	node {
 		label 'build_in'
 		customWorkspace '/mnt/project/'
 	}
 	stages {
 		stage('git clone') {
 			steps {
-	         		git clone "https://github.com/ShivanidMore/onlinebookstore.git"
+	         		sh "git clone "https://github.com/ShivanidMore/onlinebookstore.git""
 			}
                 }
 		stage('maven install') {
