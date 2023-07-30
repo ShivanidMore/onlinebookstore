@@ -4,7 +4,7 @@ pipeline {
 		stage('git_clone'){
 			steps {  
 				dir('/mnt/project/'){
-					git clone "https://github.com/ShivanidMore/onlinebookstore.git"
+					sh 'git clone "https://github.com/ShivanidMore/onlinebookstore.git"'
 				}
 	         		
 			}
