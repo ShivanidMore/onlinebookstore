@@ -4,7 +4,7 @@ pipeline {
 		customWorkspace '/mnt/project/'
 	}
 	stages {
-		stage('git clone') {
+		stage('git_clone'){
 			steps {
 	         		sh "git clone "https://github.com/ShivanidMore/onlinebookstore.git""
 			}
