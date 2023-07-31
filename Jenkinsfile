@@ -4,6 +4,7 @@ pipeline {
 		stage('git_clone'){
 			steps {  
 				dir('/mnt/project/'){
+					rm -rf onlinebookstore
 					sh 'git clone "https://github.com/ShivanidMore/onlinebookstore.git"'
 				}
 	         		
